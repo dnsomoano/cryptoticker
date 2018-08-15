@@ -1,5 +1,5 @@
 Objectives
-- [] Use state in React
+- [X] Use state in React
 - [] Render data from an API request in React
 - [] Use setInterval to repeat
 - [] Use React the following lifecycle methods: componentDidMount, componentWillUnmount

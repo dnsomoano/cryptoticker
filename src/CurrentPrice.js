@@ -14,23 +14,29 @@ class CurrentPrice extends Component {
         .then(resp => resp.json())
         .then(newCryptoData => {
           const coinArray = Object.values(newCryptoData.data);
-          console.log(coinArray);
-          console.log(coinArray[0].quotes.USD.price);
-          this.setState({
-            price: coinArray
-          });
-          // for (let i = 0; i < coinArray.length; i++) {
-          //   console.log(coinArray[i].quotes.USD.price);
-          //   let coins = coinArray[i].quotes.USD.price;
-          //   coins;
-          // }
+          coinArray.map(index =>
+            this.setState({
+              price: coinArray[index].quotes.USD.price
+            })
+          );
         });
-    }, 10000);
+      // const coinsMapped = coinArray.map();
+      // debug messages
+      // console.log(coinArray);
+      // console.log(coinArray[0].quotes.USD.price);
+      //
+      // for (let i = 0; i < coinArray.length; i++) {
+      //   console.log(coinArray[i].quotes.USD.price);
+      //   let coins = coinArray[i].quotes.USD.price;
+      //   return coins;
+      // }
+    }, 2000);
+    // }, 2000);
   }
   render() {
     return (
-      <div>
-        The price of {this.name} is {this.state.price}
+      <div className="coin-results">
+        The price of {this.state.name} is {this.state.price}
       </div>
     );
   }
