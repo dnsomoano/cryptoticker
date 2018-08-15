@@ -1,7 +1,7 @@
 Objectives
 - [X] Use state in React
 - [] Render data from an API request in React
-- [] Use setInterval to repeat
+- [X] Use setInterval to repeat
 - [] Use React the following lifecycle methods: componentDidMount, componentWillUnmount
 - [] Use React Component subclasses
 - [] Use stateless-functional components in React

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import CurrentPrice from './CurrentPrice';
+import CoinList from './CoinList';
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Crypto currencies</h1>
         </header>
-        <CurrentPrice name={this.props.name} price={this.props.price} />
+        <CoinList name={this.props.name} price={this.props.price} />
       </div>
     );
   }
