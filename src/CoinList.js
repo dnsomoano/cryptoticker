@@ -28,10 +28,10 @@ class CoinList extends Component {
     return this.state.coinArray.map((coins, index) => {
       return (
         <Coin
-          name={coins.name}
-          icon={coins.id}
-          price={coins.price}
           key={index}
+          id={coins.id}
+          name={coins.name}
+          price={coins.quotes.USD.price}
         />
       );
     });

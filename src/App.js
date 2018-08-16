@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Crypto currencies</h1>
         </header>
-        <CoinList name={this.props.name} price={this.props.price} />
+        <CoinList />
       </div>
     );
   }
