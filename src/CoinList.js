@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import Coin from "./Coin";
 
 class CoinList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      price: ""
+      // initial empty array
+      coinArray: []
     };
   }
   componentDidMount() {
@@ -23,9 +25,16 @@ class CoinList extends Component {
     }, 2000);
   }
   render() {
-    return (
-      // this.state.coinArray.map((coins, index) =>) TODO
-    );
+    return this.state.coinArray.map((coins, index) => {
+      return (
+        <Coin
+          name={coins.name}
+          icon={coins.id}
+          price={coins.price}
+          key={index}
+        />
+      );
+    });
   }
 }
 
