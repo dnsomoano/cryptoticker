@@ -24,6 +24,7 @@ class CoinList extends Component {
       // console.log(coinArray[0].quotes.USD.price);
     }, 2000);
   }
+
   render() {
     return this.state.coinArray.map((coins, index) => {
       return (

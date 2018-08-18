@@ -22,7 +22,41 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+table {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #222;
+  vertical-align: 1em;
+}
+
+tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  border: 0.1em solid black;
+  text-align: center;
+  background-color: white;
+  /* width: 20em; */
+}
+
+td {
+  border: 0.1em solid black;
+  padding: 0.5em;
+}
+
+td.coinId {
+  text-align: center;
+}
+td.coinName {
+  text-align: center;
+}
+td.coinIcon {
+  align: center;
+}
+td.coinPrice {
+  text-align: right;
+  min-width: 40px;
 }
