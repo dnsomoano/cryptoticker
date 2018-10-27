@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #ffe3aa;
 }
 
 .App-logo {
@@ -31,19 +32,24 @@
 }
 
 /*  */
-/* Table element */
-table {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #ffe3aa;
+
+.body {
   border: 0.2em double black;
+}
+
+/* Table element */
+.coin-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0em 1em 0;
 }
 
 /* Table header */
 th {
-  border-radius: 0.2em;
-  padding: 0.5em;
+  border-radius: 0.3em;
+  padding: 1em;
   background-color: #d4b16a;
   border: 0.1em solid black;
   color: white;
@@ -62,4 +68,68 @@ td {
   border-radius: 0.2em;
   padding: 0.5em;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+#dev-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+  color: #ebe5da;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+/* Large Monitors */
+/* @media (min-device-width: 1025px) {
+} */
+
+/* Tablets, iPads, and Kindles */
+@media (max-device-width: 1024px) and (min-device-width: 415px) {
+  th {
+    padding: 0.5em;
+  }
+
+  td {
+    padding: 0.5em;
+  }
+}
+
+/* Mobile Devices */
+@media (max-device-width: 414px) and (min-device-width: 320px) {
+  th {
+    padding: 0em;
+  }
+
+  td {
+    padding: 0em;
+  }
+
+  .coin-rank-header {
+    display: none;
+  }
+
+  .coin-rank {
+    display: none;
+  }
+
+  .coin-change-24h-header {
+    display: none;
+  }
+
+  .coin-change-24h {
+    display: none;
+  }
+
+  .coin-change-7d-header {
+    display: none;
+  }
+
+  .coin-change-7d {
+    display: none;
+  }
 }
