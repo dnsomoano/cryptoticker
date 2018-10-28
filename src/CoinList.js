@@ -6,35 +6,47 @@ class CoinList extends Component {
     super(props);
     this.state = {
       // initial empty array
-      coinArray: []
+      coinArray: [],
+      textColor: ""
     };
   }
   componentDidMount() {
     setInterval(() => {
       const _url = "https://api.coinmarketcap.com/v2/ticker/";
+      // const increase = 0.01;
+      // const decrease = -0.01;
       fetch(_url)
         .then(resp => resp.json())
         .then(newCryptoData => {
           this.setState({
             coinArray: Object.values(newCryptoData.data)
           });
+
+          // debug messages
+          // console.log(this.state.coinArray);
+          // console.log(this.state.coinArray[0].quotes.USD.percent_change_1h);
+          // console.log(
+          //   "coin of " +
+          //     coin.name +
+          //     " price of" +
+          //     coin.quotes.USD.percent_change_1h
+          // );
         });
-      // debug messages
-      // console.log(coinArray);
-      // console.log(coinArray[0].quotes.USD.price);
-    }, 1000);
+    }, 5000);
   }
 
   render() {
-    return this.state.coinArray.map((coins, index) => {
+    return this.state.coinArray.map((coin, index) => {
+      const color = coin.quotes.USD.percent_change_1h < 0.01 ? "red" : "green";
       return (
         <Coin
-          rank={coins.rank}
-          name={coins.name}
-          price={coins.quotes.USD.price}
-          change1h={coins.quotes.USD.percent_change_1h}
-          change24h={coins.quotes.USD.percent_change_24h}
-          change7d={coins.quotes.USD.percent_change_7d}
+          rank={coin.rank}
+          name={coin.name}
+          price={coin.quotes.USD.price}
+          change1h={coin.quotes.USD.percent_change_1h}
+          change24h={coin.quotes.USD.percent_change_24h}
+          change7d={coin.quotes.USD.percent_change_7d}
+          textColor={color}
           key={index}
         />
       );
