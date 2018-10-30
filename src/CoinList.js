@@ -32,12 +32,13 @@ class CoinList extends Component {
           //     coin.quotes.USD.percent_change_1h
           // );
         });
-    }, 5000);
+    }, 2500);
   }
 
   render() {
     return this.state.coinArray.map((coin, index) => {
-      const color = coin.quotes.USD.percent_change_1h < 0.01 ? "red" : "green";
+      const color =
+        coin.quotes.USD.percent_change_1h < 0.01 ? "darkred" : "green";
       return (
         <Coin
           rank={coin.rank}

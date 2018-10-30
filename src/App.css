@@ -8,10 +8,10 @@
   height: 80px;
 }
 
-@font-face {
+/* @font-face {
   font-family: Bosk;
   src: local("Bosk.ttf") format("true-type");
-}
+} */
 .App-header {
   background-color: #553900;
   background-image: url("banner.jpg");
@@ -22,8 +22,9 @@
 }
 
 .App-title {
-  color: white;
-  text-shadow: 0.1em 0.1em 0.1em black;
+  color: black;
+  font-family: "Alfa Slab One", cursive;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   font-size: 1.5em;
 }
 
@@ -48,11 +49,11 @@
 
 /* Table header */
 th {
-  border-radius: 0.3em;
-  padding: 1em;
   background-color: #d4b16a;
   border: 0.1em solid black;
+  border-radius: 0.3em;
   color: white;
+  padding: 1em;
   text-shadow: 0.1em 0.1em 0.1em black;
 }
 
@@ -66,8 +67,13 @@ tr {
 td {
   border: 0.1em solid black;
   border-radius: 0.2em;
+  font-family: "Coustard", serif;
   padding: 0.5em;
   text-align: center;
+}
+
+.coin-name {
+  text-align: start;
 }
 
 a {
@@ -91,16 +97,20 @@ a {
 /* Tablets, iPads, and Kindles */
 @media (max-device-width: 1024px) and (min-device-width: 415px) {
   th {
-    padding: 0.5em;
+    padding: 0.45em;
   }
 
   td {
-    padding: 0.5em;
+    padding: 0.45em;
   }
 }
 
 /* Mobile Devices */
 @media (max-device-width: 414px) and (min-device-width: 320px) {
+  .App-title {
+    font-size: 1.4em;
+  }
+
   th {
     padding: 0em;
   }
@@ -117,13 +127,26 @@ a {
     display: none;
   }
 
-  .coin-change-24h-header {
+  .coin-icon-ico {
+    height: 0.8em;
+    width: 0.8em;
+  }
+
+  .coin-change-1h-header {
+    display: none;
+  }
+
+  .coin-change-1h {
+    display: none;
+  }
+
+  /* .coin-change-24h-header {
     display: none;
   }
 
   .coin-change-24h {
     display: none;
-  }
+  } */
 
   .coin-change-7d-header {
     display: none;

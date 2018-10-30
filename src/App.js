@@ -14,11 +14,11 @@ class App extends Component {
             <tbody>
               <tr>
                 <th className="coin-rank-header">Rank</th>
-                <th className="currencyName">Icon</th>
+                {/* <th className="coin-icon-header">Icon</th> */}
                 <th>Name</th>
                 <th>Price</th>
-                <th className="hourlyChange">% Change (1hr)</th>
-                <th className="coin-change-24h">% Change (24h)</th>
+                <th className="coin-change-1h-header">% Change (1hr)</th>
+                <th className="coin-change-24h-header">% Change (24h)</th>
                 <th className="coin-change-7d-header">% Change (7d)</th>
               </tr>
               <CoinList />
