@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import CoinList from "./CoinList";
+import CoinList from "./Components/CoinList";
 
 class App extends Component {
   render() {
@@ -15,8 +15,9 @@ class App extends Component {
               <tr>
                 <th className="coin-rank-header">Rank</th>
                 {/* <th className="coin-icon-header">Icon</th> */}
-                <th>Name</th>
-                <th>Price</th>
+                <th className="coin-name-header">Name</th>
+                <th className="coin-price-header">Price</th>
+                <th>Sparklines</th>
                 <th className="coin-change-1h-header">% Change (1hr)</th>
                 <th className="coin-change-24h-header">% Change (24h)</th>
                 <th className="coin-change-7d-header">% Change (7d)</th>

@@ -18,13 +18,14 @@
   background-position: top;
   height: 150px;
   padding: 20px;
-  border: 0.2em double black;
+  border: 0.2em double #373636;
 }
 
 .App-title {
-  color: black;
+  color: #ebe5da;
   font-family: "Alfa Slab One", cursive;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-weight: 200;
+  text-shadow: -1px 0 #373636, 0 1px #373636, 1px 0 #373636, 0 -1px #373636;
   font-size: 1.5em;
 }
 
@@ -35,7 +36,8 @@
 /*  */
 
 .body {
-  border: 0.2em double black;
+  border: 0.2em double #373636;
+  font-family: "Coustard", serif;
 }
 
 /* Table element */
@@ -50,30 +52,13 @@
 /* Table header */
 th {
   background-color: #d4b16a;
-  border: 0.1em solid black;
+  border: 0.1em solid #373636;
   border-radius: 0.3em;
-  color: white;
+  color: #ebe5da;
+  font-family: "Alfa Slab One", cursive;
+  font-weight: 100;
   padding: 1em;
-  text-shadow: 0.1em 0.1em 0.1em black;
-}
-
-/* Table rows */
-tr {
-  text-align: center;
-  background-color: #ebe5da;
-}
-
-/* Table data */
-td {
-  border: 0.1em solid black;
-  border-radius: 0.2em;
-  font-family: "Coustard", serif;
-  padding: 0.5em;
-  text-align: center;
-}
-
-.coin-name {
-  text-align: start;
+  text-shadow: -1px 0 #373636, 0 1px #373636, 1px 0 #373636, 0 -1px #373636;
 }
 
 a {
@@ -84,8 +69,8 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: black;
-  color: #ebe5da;
+  background-color: #373636;
+  color: #ffe3aa;
   cursor: pointer;
   font-size: 0.8em;
 }
@@ -97,25 +82,21 @@ a {
 /* Tablets, iPads, and Kindles */
 @media (max-device-width: 1024px) and (min-device-width: 415px) {
   th {
-    padding: 0.45em;
-  }
-
-  td {
-    padding: 0.45em;
+    padding: 0.3em;
   }
 }
 
 /* Mobile Devices */
 @media (max-device-width: 414px) and (min-device-width: 320px) {
   .App-title {
-    font-size: 1.4em;
+    font-size: 2em;
+    font-weight: 100;
+    margin-left: 1.2em;
+    text-align: center;
+    width: 6em;
   }
 
   th {
-    padding: 0em;
-  }
-
-  td {
     padding: 0em;
   }
 
@@ -123,36 +104,15 @@ a {
     display: none;
   }
 
-  .coin-rank {
-    display: none;
-  }
-
-  .coin-icon-ico {
-    height: 0.8em;
-    width: 0.8em;
-  }
-
   .coin-change-1h-header {
     display: none;
   }
 
-  .coin-change-1h {
+  .coin-change-24h-header {
     display: none;
   }
-
-  /* .coin-change-24h-header {
-    display: none;
-  }
-
-  .coin-change-24h {
-    display: none;
-  } */
 
   .coin-change-7d-header {
-    display: none;
-  }
-
-  .coin-change-7d {
     display: none;
   }
 }

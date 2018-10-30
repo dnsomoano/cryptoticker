@@ -43,7 +43,7 @@ https://s2.coinmarketcap.com/static/img/coins/16x16/${coin.id}.png
 
 ### Epic Mode
 
-- [ ] How else could we present the changing price to the user? Look into Edward Tufte's [sparklines](https://en.wikipedia.org/wiki/Sparkline), how do you think this could be implemented as a React component? Try using a third party library to render a sparkline for each currency.
+- [x] How else could we present the changing price to the user? Look into Edward Tufte's [sparklines](https://en.wikipedia.org/wiki/Sparkline), how do you think this could be implemented as a React component? Try using a third party library to render a sparkline for each currency.
 
 ## Additional Resources
 

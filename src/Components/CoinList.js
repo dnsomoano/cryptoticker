@@ -6,15 +6,14 @@ class CoinList extends Component {
     super(props);
     this.state = {
       // initial empty array
-      coinArray: [],
-      textColor: ""
+      coinArray: []
+      // textColor: ""
     };
   }
+
   componentDidMount() {
     setInterval(() => {
       const _url = "https://api.coinmarketcap.com/v2/ticker/";
-      // const increase = 0.01;
-      // const decrease = -0.01;
       fetch(_url)
         .then(resp => resp.json())
         .then(newCryptoData => {
@@ -23,17 +22,14 @@ class CoinList extends Component {
           });
 
           // debug messages
-          // console.log(this.state.coinArray);
+          // console.log(this.state.coinArray.sort(this.state.coinArray.rank));
           // console.log(this.state.coinArray[0].quotes.USD.percent_change_1h);
-          // console.log(
-          //   "coin of " +
-          //     coin.name +
-          //     " price of" +
-          //     coin.quotes.USD.percent_change_1h
-          // );
         });
     }, 2500);
   }
+
+  // // Compare price of previous state with new state
+  // componentDidUpdate(prevState) {}
 
   render() {
     return this.state.coinArray.map((coin, index) => {
@@ -52,6 +48,7 @@ class CoinList extends Component {
         />
       );
     });
+    // .sort(this.state.coinArray.rank);
   }
 }
 
