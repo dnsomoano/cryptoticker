@@ -25,7 +25,7 @@ class CoinList extends Component {
           // console.log(this.state.coinArray.sort(this.state.coinArray.rank));
           // console.log(this.state.coinArray[0].quotes.USD.percent_change_1h);
         });
-    }, 2500);
+    }, 1000);
   }
 
   // // Compare price of previous state with new state
